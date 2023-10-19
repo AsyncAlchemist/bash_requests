@@ -16,9 +16,9 @@ This Bash script is a versatile tool for making HTTP/HTTPS requests. It aims to 
 
 Clone the repository or download the `bash_requests.sh` file and give it executable permissions:
 
-\`\`\`bash
+```bash
 chmod +x bash_requests.sh
-\`\`\`
+```
 
 ## Usage
 
@@ -27,7 +27,10 @@ chmod +x bash_requests.sh
 Run the script from the command line as shown below:
 
 #### Usage:
+
+```bash
 ./bash_requests.sh [OPTIONS] <URL> "<HEADER>" "<HEADER>"
+```
 
 #### Options:
 - -h, --help: Display the help screen.
@@ -39,11 +42,13 @@ Run the script from the command line as shown below:
 #### Examples:
 
 1. **Making a request with debug output and a specified header:**
+```bash
    ./bash_requests.sh -d https://api.twitter.com/2/tweets/123456789 "Authorization: Bearer TOKEN"
-
+```
 2. **Using a specific tool (curl in this example) with debug output and a specified user-agent:**
+```bash
    ./bash_requests.sh -t curl -d https://api.twitter.com/2/tweets/123456789 "User-Agent: MyUserAgent"
-
+```
 ### Advanced Usage: Using the `request()` Function
 
 To leverage the power of `bash_requests.sh` directly in your script, you can source the file and utilize the `request()` function:
